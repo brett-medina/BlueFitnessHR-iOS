@@ -9,4 +9,6 @@ target 'BlueFitnessHR' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'UIGradient', '~> 1.2.0'
+  
 end

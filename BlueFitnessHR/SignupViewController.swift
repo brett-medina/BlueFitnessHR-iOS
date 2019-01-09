@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import UIGradient
 
 class SignupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.fromGradientWithDirection(.topToBottom, frame: self.view.frame, colors: [UIColor.blue, UIColor.green])
 
         // Do any additional setup after loading the view.
     }
@@ -21,7 +23,6 @@ class SignupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -31,5 +32,6 @@ class SignupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
