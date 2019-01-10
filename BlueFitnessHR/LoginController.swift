@@ -26,12 +26,15 @@ class LoginController: UIViewController {
     @IBAction func loginButton(_ sender: UIButton) {
         guard let email = emailTextField.text else {changeErrorLabel(); return}
         guard let password = passwordTextField.text else {changeErrorLabel(); return}
-        
         // handle login
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if (error == nil && user != nil) {
                 // valid login
-                self.badLoginLabel.text = ""
+//                self.badLoginLabel.text = ""
+                self.performSegue(withIdentifier: "baseHRViewController", sender: self)
+
+
+
             } else {
                 // bad login
                 self.badLoginLabel.text = "Invalid email and/or password"
