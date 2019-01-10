@@ -31,10 +31,11 @@ class LoginController: UIViewController {
             if (error == nil && user != nil) {
                 // valid login
 //                self.badLoginLabel.text = ""
-                self.performSegue(withIdentifier: "baseHRViewController", sender: self)
-
-
-
+                DispatchQueue.main.async(){
+                    self.performSegue(withIdentifier: "LoginToHome", sender: self)
+                }
+                
+//                print("HHIH")
             } else {
                 // bad login
                 self.badLoginLabel.text = "Invalid email and/or password"

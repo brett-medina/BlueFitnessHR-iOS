@@ -24,7 +24,7 @@
         <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginController" customModule="BlueFitnessHR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="LoginController" customModule="BlueFitnessHR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,17 +106,17 @@
                         <outlet property="passwordTextField" destination="VaN-4q-Esa" id="XpF-AA-1hE"/>
                         <outlet property="signupLabel" destination="uo8-rW-1FG" id="Yo4-7F-SfC"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="TGQ-RI-Rl9"/>
-                        <segue destination="wgi-vc-yJ2" kind="show" identifier="toSignup" id="fY2-iO-zJ3"/>
+                        <segue destination="inO-49-lx3" kind="show" identifier="LoginToHome" id="vrF-49-FE7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.251231527093594"/>
+            <point key="canvasLocation" x="28" y="27"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="ZXX-lu-HlK">
             <objects>
-                <viewController id="wgi-vc-yJ2" customClass="SignupViewController" customModule="BlueFitnessHR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="wgi-vc-yJ2" customClass="SignupViewController" customModule="BlueFitnessHR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A24-Vq-kx6" customClass="UICollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,15 +128,8 @@
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4j-lN-JMo">
-                                <rect key="frame" x="44" y="289" width="287" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="re-enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v9y-RT-dXa">
-                                <rect key="frame" x="44" y="442" width="287" height="30"/>
+                                <rect key="frame" x="44" y="377" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
@@ -150,36 +143,59 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1T-Pm-cmo">
-                                <rect key="frame" x="44" y="391" width="287" height="30"/>
+                                <rect key="frame" x="44" y="332" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MwR-QG-Lpe">
-                                <rect key="frame" x="44" y="340" width="287" height="30"/>
+                                <rect key="frame" x="44" y="286" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21R-29-YVU">
-                                <rect key="frame" x="44" y="503" width="287" height="43"/>
+                                <rect key="frame" x="44" y="422" width="287" height="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.74901960779999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xtw-ga-VWb"/>
+                                    <action selector="signUpAction:" destination="wgi-vc-yJ2" eventType="touchUpInside" id="fV5-fc-rbg"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1fu-js-8A9">
+                                <rect key="frame" x="44" y="332" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lef-lD-FPD" userLabel="Bad Login Label">
+                                <rect key="frame" x="44" y="473" width="287" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="cV7-Wo-dYc"/>
                     </view>
+                    <connections>
+                        <outlet property="badLoginLabel" destination="Lef-lD-FPD" id="6Uu-xP-yUP"/>
+                        <outlet property="createAccountButton" destination="21R-29-YVU" id="qHx-RV-j9v"/>
+                        <outlet property="email" destination="MwR-QG-Lpe" id="7Ga-sb-ocq"/>
+                        <outlet property="name" destination="T3z-vc-GhW" id="BOR-pl-iFN"/>
+                        <outlet property="password" destination="A24-Vq-kx6" id="MFZ-Yw-Olz"/>
+                        <outlet property="passwordConfirm" destination="v9y-RT-dXa" id="DC4-WQ-ngC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7W-c0-dHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,7 +204,7 @@
         <!--BaseHR View Controller-->
         <scene sceneID="Kzw-1X-Cfc">
             <objects>
-                <viewController id="inO-49-lx3" customClass="BaseHRViewController" customModule="BlueFitnessHR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BaseHR" id="inO-49-lx3" customClass="BaseHRViewController" customModule="BlueFitnessHR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="osP-VH-GxM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,13 +220,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaR-Cc-jjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1874.4000000000001" y="13.300492610837439"/>
+            <point key="canvasLocation" x="521" y="767"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart.png" width="1200" height="1200"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="SnR-AX-urN"/>
-    </inferredMetricsTieBreakers>
 </document>
