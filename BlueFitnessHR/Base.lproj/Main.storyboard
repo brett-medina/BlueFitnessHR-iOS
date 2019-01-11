@@ -111,7 +111,7 @@
                         <outlet property="passwordTextField" destination="VaN-4q-Esa" id="XpF-AA-1hE"/>
                         <outlet property="signupLabel" destination="uo8-rW-1FG" id="Yo4-7F-SfC"/>
                         <outlet property="view" destination="8bC-Xf-vdC" id="TGQ-RI-Rl9"/>
-                        <segue destination="inO-49-lx3" kind="show" identifier="LoginToHome" id="vrF-49-FE7"/>
+                        <segue destination="mVj-Nq-cSf" kind="show" identifier="LoginToHome" id="vrF-49-FE7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -197,7 +197,7 @@
                         <outlet property="name" destination="T3z-vc-GhW" id="BOR-pl-iFN"/>
                         <outlet property="password" destination="p1T-Pm-cmo" id="Dnf-7V-59R"/>
                         <outlet property="passwordConfirm" destination="v9y-RT-dXa" id="DC4-WQ-ngC"/>
-                        <segue destination="inO-49-lx3" kind="show" identifier="SignupToBase" id="kvj-Ns-awV"/>
+                        <segue destination="mVj-Nq-cSf" kind="show" identifier="SignupToBase" id="kvj-Ns-awV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v7W-c0-dHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -216,20 +216,53 @@
                                 <rect key="frame" x="86" y="192" width="202" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PWT-W1-jDQ">
+                                <rect key="frame" x="139" y="397" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XgA-Kh-HII"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uaE-54-ruz">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="bar_button.png" id="XUT-Wd-Ml8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="heart" destination="tsE-un-nbh" id="iF5-6N-grw"/>
+                        <outlet property="hr" destination="PWT-W1-jDQ" id="Qsb-cb-zdp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaR-Cc-jjw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="768"/>
+            <point key="canvasLocation" x="1463.2" y="767.73399014778329"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QmO-Hp-gA5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mVj-Nq-cSf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k8o-by-AM2">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="inO-49-lx3" kind="relationship" relationship="rootViewController" id="HHd-c3-2fb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DjF-jO-eXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="520.79999999999995" y="767.73399014778329"/>
         </scene>
     </scenes>
     <resources>
+        <image name="bar_button.png" width="480" height="480"/>
         <image name="heart.png" width="1200" height="1200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vrF-49-FE7"/>
+        <segue reference="kvj-Ns-awV"/>
     </inferredMetricsTieBreakers>
 </document>
