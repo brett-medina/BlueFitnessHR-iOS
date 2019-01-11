@@ -22,14 +22,13 @@ class SignupViewController: UIViewController {
     
     
     @IBAction func signUpAction(_ sender: UIButton) {
-        if password.text != passwordConfirm.text {
-            self.badLoginLabel.text = "Passwords don't match"
+        if password.text != passwordConfirm.text && password.text != ""{
+            self.badLoginLabel.text = "Passwords must match and be at least 8 characters long"
         }
         else{
             Auth.auth().createUser(withEmail: email.text!, password: password.text!){ (user, error) in
                 if error == nil {
-                    print("Created")
-//                    self.performSegue(withIdentifier: "BaseHRViewController", sender: self)
+                    self.performSegue(withIdentifier: "SignupToBase", sender: self)
                 }
                 else{//Alert error
                     self.badLoginLabel.text = "Invalid email"
@@ -40,7 +39,7 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.fromGradientWithDirection(.topToBottom, frame: self.view.frame, colors: [UIColor.blue, UIColor.green])
+        self.view.backgroundColor = UIColor.fromGradientWithDirection(.topToBottom, frame: self.view.frame, colors: [UIColor(red: 1, green: 1, blue: 1, alpha: 1.00), UIColor(red: 39/255.0, green: 110/255.0, blue: 237/255.0, alpha: 1.00)])
         // Do any additional setup after loading the view.
     }
 

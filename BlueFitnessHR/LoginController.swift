@@ -48,9 +48,8 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         // cache if already logged in, don't have to login
-        
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.fromGradientWithDirection(.topToBottom, frame: self.view.frame, colors: [UIColor.blue, UIColor.green])
+        self.view.backgroundColor = UIColor.fromGradientWithDirection(.topToBottom, frame: self.view.frame, colors: [UIColor(red: 1, green: 1, blue: 1, alpha: 1.00), UIColor(red: 39/255.0, green: 110/255.0, blue: 237/255.0, alpha: 1.00)])
         // Do any additional setup after loading the view, typically from a nib.
     }
 
